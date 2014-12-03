@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<!-- Definitions for Tiles documentation -->
+
+<tiles-definitions>
+
+
+
+	<!-- 后台管理 -->
+	<definition name="admin" template="/WEB-INF/tiles/frm/admin.jsp" />
+	<definition name="admin.*.*" extends="admin">
+		<put-attribute name="content" value="/WEB-INF/tiles/admin/{1}/{2}.jsp" />
+	</definition>
+	<definition name="admin.*" template="/WEB-INF/tiles/admin/{1}.jsp" />
+	
+	<definition name="system.tmp.*" extends="frame">
+		<put-attribute name="body" value="/WEB-INF/tiles/admin/tmp/{1}.jsp" />
+	</definition>
+	
+</tiles-definitions>
